@@ -271,34 +271,11 @@
     .cal-event-date { font-weight: 600; font-size: 14px; }
     .cal-event-time { font-size: 16px; font-weight: bold; white-space: nowrap; margin-left: 12px; }
 
-    /* ── WISHES LIST EMPTY STATE ── */
-    .wl-root { width: 100%; font-family: KZ_RomulC, serif; }
-    .wl-state { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
-    .wl-icon { font-size: 32px; color: #9c7e49; margin-bottom: 12px; }
-    .wl-text { font-size: 16px; color: #9c7e49; text-align: center; }
-
-    /* ── FIXED BOTTOM BUTTONS ── */
-    .wishes-fixed-btn {
-      position: fixed;
-      bottom: 24px; left: 50%;
-      transform: translateX(calc(-50% - 100px));
-      display: flex; align-items: center; gap: 8px;
-      padding: 0 20px;
-      background-color: rgb(85,57,17);
-      color: #fff;
-      border: none;
-      border-radius: 50px;
-      font-size: 17px;
-      min-height: 54px;
-      cursor: pointer;
-      box-shadow: rgba(85,57,17,0.35) 0px 12px 24px;
-      z-index: 999;
-      font-family: 'KZOptima', 'Cormorant Garamond', serif;
-    }
+    /* ── FIXED BOTTOM BUTTON ── */
     .audio-fixed-btn {
       position: fixed;
       bottom: 24px; left: 50%;
-      transform: translateX(calc(-50% + 100px));
+      transform: translateX(-50%);
       display: flex; align-items: center; gap: 10px;
       padding: 0 18px;
       background-color: rgb(85,57,17);
@@ -476,20 +453,6 @@
     }
     .modal-error { color: #e53e3e; font-size: 13px; margin-bottom: 8px; display: none; }
 
-    /* ── WISHES MODAL ── */
-    .wishes-modal-box {
-      max-width: 360px;
-    }
-    .wishes-modal-box textarea {
-      width: 100%; min-height: 100px; padding: 12px 16px;
-      border: 2px solid #e8d5b0; border-radius: 14px;
-      font-size: 15px; font-family: 'KZ_RomulC', 'Cormorant Garamond', serif;
-      color: #3a2510; background: #fff; outline: none;
-      resize: none; margin-bottom: 12px;
-      transition: border-color 0.2s;
-    }
-    .wishes-modal-box textarea:focus { border-color: #9c7e49; }
-
     /* ── SUCCESS/DECLINE MODALS ── */
     .result-modal-box { text-align: center; }
     .result-emoji { font-size: 52px; margin-bottom: 10px; }
@@ -527,8 +490,7 @@
       .mobile-frame { max-width: 100%; border-radius: 0; box-shadow: none; }
       .mobile-notch { display: none; }
       .page-content { height: auto; overflow: visible; }
-      .wishes-fixed-btn { transform: translateX(calc(-50% - 80px)); font-size: 14px; padding: 0 14px; }
-      .audio-fixed-btn { transform: translateX(calc(-50% + 80px)); font-size: 14px; padding: 0 12px; }
+      .audio-fixed-btn { transform: translateX(-50%); font-size: 14px; padding: 0 12px; }
     }
   </style>
 </head>
@@ -699,12 +661,12 @@
 
         <!-- z:27  "Алматы қаласы" -->
         <div class="c-text anim-slideL" style="left:50%;top:41.24%;z-index:27;width:377px">
-          <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;font-weight:bold;line-height:1.4">Алматы қаласы</div>
+          <div class="text-content" style="font-size:26px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;font-weight:bold;line-height:1.4">Алматы қаласы</div>
         </div>
 
         <!-- z:58  Address detail -->
         <div class="c-text anim-fade" style="left:50%;top:42.80%;z-index:58;width:325px">
-          <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Кыран көшесі, 9&#10;«Baq Sarai» мейрамханасы</div>
+          <div class="text-content" style="font-size:26px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Кыран көшесі, 9&#10;«Baq Sarai» мейрамханасы</div>
         </div>
 
         <!-- z:60  Venue photo -->
@@ -719,7 +681,7 @@
 
         <!-- z:63  Direction text -->
         <div class="c-text anim-fade" style="left:50%;top:49.48%;z-index:63;width:316px">
-          <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Ыңғайлы әрі оңай жету үшін, төмендегі сілтемені қолданыңыз.</div>
+          <div class="text-content" style="font-size:26px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Ыңғайлы әрі оңай жету үшін, төмендегі сілтемені қолданыңыз.</div>
         </div>
 
         <!-- z:84  Small rotated image -->
@@ -839,21 +801,6 @@
           <img src="https://tyrasoft.kz/uploads/beyne/page_builder_comp_1769681000774_df304caea3da421bae921bd844b8de09.webp" style="width:100%;height:100%;object-fit:cover" alt="">
         </div>
 
-        <!-- z:91  "Тойға ізгі тілектер:" -->
-        <div class="c-text anim-slideL" style="left:50%;top:81.83%;z-index:91;width:346px">
-          <div class="text-content" style="font-size:40px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Тойға ізгі тілектер:</div>
-        </div>
-
-        <!-- z:92  WISHES LIST -->
-        <div class="c" style="left:50%;top:89.43%;z-index:92;width:450px;height:600px">
-          <div class="wl-root">
-            <div class="wl-state" id="wishesList">
-              <div class="wl-icon">✦</div>
-              <p class="wl-text">Әзірше тілектер жоқ</p>
-            </div>
-          </div>
-        </div>
-
         <!-- z:77  Image near bottom -->
         <div class="c" style="left:50%;top:93.48%;z-index:77;width:320px;height:147px">
           <img src="https://tyrasoft.kz/uploads/beyne/page_builder_comp_1769681000774_df304caea3da421bae921bd844b8de09.webp" style="width:100%;height:100%;object-fit:cover" alt="">
@@ -870,15 +817,8 @@
 </div>
 
 <!-- ══════════════════════════════════════════
-     FIXED BUTTONS
+     FIXED BUTTON
 ══════════════════════════════════════════ -->
-<button class="wishes-fixed-btn" onclick="openWishesModal()">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
-  </svg>
-  ТІЛЕК ЖАЗУ
-</button>
-
 <audio id="bgAudio" src="https://tyrasoft.kz/uploads/audio/audio_1766864525634_tykt.mp3" preload="metadata" loop></audio>
 <button class="audio-fixed-btn" id="audioBtn" onclick="toggleAudio()">
   <div class="audio-play-circle">
@@ -908,17 +848,6 @@
   </div>
 </div>
 
-<!-- Wishes Modal -->
-<div class="modal-overlay" id="wishesModal">
-  <div class="modal-box wishes-modal-box">
-    <div class="modal-title-text">Тілегіңізді жазыңыз:</div>
-    <input type="text" class="modal-input" id="wishName" placeholder="Атыңыз">
-    <textarea id="wishText" placeholder="Тілегіңізді жазыңыз..."></textarea>
-    <div class="modal-error" id="wishError"></div>
-    <button class="modal-submit-btn" style="font-family:'KZ_RomulC','Cormorant Garamond',serif" onclick="submitWish()">ЖІБЕРУ</button>
-  </div>
-</div>
-
 <!-- Success Modal -->
 <div class="modal-overlay" id="successModal">
   <div class="modal-box result-modal-box">
@@ -936,16 +865,6 @@
     <div class="result-title">Түсінікті</div>
     <p class="result-text">Жауабыңыз үшін рахмет. Сізді жоқтаймыз!</p>
     <button class="result-close-btn" onclick="closeModal('declineModal')">Жабу</button>
-  </div>
-</div>
-
-<!-- Wish Sent Modal -->
-<div class="modal-overlay" id="wishSentModal">
-  <div class="modal-box result-modal-box">
-    <div class="result-emoji">💝</div>
-    <div class="result-title">Рахмет!</div>
-    <p class="result-text">Тілегіңіз жіберілді!</p>
-    <button class="result-close-btn" onclick="closeModal('wishSentModal')">Жабу</button>
   </div>
 </div>
 
@@ -1115,41 +1034,6 @@
       ? `${displayName} және жұбайыңыздың жауабы қабылданды. Мерейтойда кездескенше!`
       : `${displayName}, жауабыңыз қабылданды. Мерейтойда кездескенше!`;
     openModal('successModal');
-  }
-
-  // ══════════════════════════════════════════
-  // WISHES
-  // ══════════════════════════════════════════
-  function openWishesModal() {
-    document.getElementById('wishName').value = '';
-    document.getElementById('wishText').value = '';
-    document.getElementById('wishError').style.display = 'none';
-    openModal('wishesModal');
-  }
-
-  async function submitWish() {
-    const name = document.getElementById('wishName').value.trim();
-    const text = document.getElementById('wishText').value.trim();
-    if (!name) { showModalError('wishError', 'Атыңызды енгізіңіз'); return; }
-    if (!text) { showModalError('wishError', 'Тілегіңізді жазыңыз'); return; }
-
-    const payload = {
-      primary: { firstName: name, lastName: '' },
-      guests: [],
-      totalCount: 1,
-      event: EVENT_NAME + ' [Тілек: ' + text + ']'
-    };
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        mode: 'no-cors'
-      });
-    } catch(e) { console.error(e); }
-
-    closeModal('wishesModal');
-    openModal('wishSentModal');
   }
 
   // ══════════════════════════════════════════
