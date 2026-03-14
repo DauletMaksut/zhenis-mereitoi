@@ -88,6 +88,12 @@
       transform: translate(-50%, -50%);
       overflow: hidden;
     }
+    /* Text components — no clip, auto height */
+    .c-text {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      overflow: visible;
+    }
 
     /* ── ANIMATIONS ── */
     @keyframes spin {
@@ -134,8 +140,7 @@
 
     /* ── TEXT STYLES ── */
     .text-content {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
+      width: 100%;
       word-break: break-word; white-space: pre-wrap;
       text-align: center; padding: 4px;
     }
@@ -595,7 +600,7 @@
         </div>
 
         <!-- z:5   "Мерейтойға шақыру" -->
-        <div class="c anim-always" style="left:50%;top:1.73%;z-index:5;width:300px;height:134px">
+        <div class="c-text anim-always" style="left:50%;top:1.73%;z-index:5;width:300px">
           <div class="text-content" style="font-size:38px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Мерейтойға шақыру</div>
         </div>
 
@@ -617,7 +622,7 @@
         </div>
 
         <!-- z:47  "жас" -->
-        <div class="c anim-always" style="left:50%;top:6.67%;z-index:47;width:294px;height:103px">
+        <div class="c-text anim-always" style="left:50%;top:6.67%;z-index:47;width:294px">
           <div class="text-content" style="font-size:26px;font-family:'KZPFMonumentaPro-Regular','Cormorant Garamond',serif;color:#b5984d;line-height:1.4">жас</div>
         </div>
 
@@ -627,17 +632,17 @@
         </div>
 
         <!-- z:89  "Жоғары көтеріңіз" -->
-        <div class="c anim-fade" style="left:50%;top:10.44%;z-index:89;width:207px;height:56px">
+        <div class="c-text anim-fade" style="left:50%;top:10.44%;z-index:89;width:207px">
           <div class="text-content" style="font-size:12px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Жоғары көтеріңіз</div>
         </div>
 
         <!-- z:48  "Құрметті қонақтар!" -->
-        <div class="c anim-fade" style="left:50%;top:12.10%;z-index:48;width:362px;height:134px">
+        <div class="c-text anim-fade" style="left:50%;top:12.10%;z-index:48;width:362px">
           <div class="text-content" style="font-size:38px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Құрметті қонақтар!</div>
         </div>
 
         <!-- z:8   Invite body text -->
-        <div class="c anim-slideL" style="left:50%;top:16.95%;z-index:8;width:327px;height:84px">
+        <div class="c-text anim-slideL" style="left:50%;top:16.95%;z-index:8;width:327px">
           <div class="text-content" style="font-size:20px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Алпыс жас – адам өміріндегі асқаралы асу, абырой мен берекенің белесі. Осы мерейлі жасқа толуыма орай, сіздерді 60 жас мерейтойыма арналған ақ дастарқанның қадірлі қонағы болуға шақырамын.</div>
         </div>
 
@@ -652,7 +657,7 @@
         </div>
 
         <!-- z:79  "Өтетін күні мен уақыты:" -->
-        <div class="c anim-slideR" style="left:50%;top:27.14%;z-index:79;width:362px;height:134px">
+        <div class="c-text anim-slideR" style="left:50%;top:27.14%;z-index:79;width:362px">
           <div class="text-content" style="font-size:38px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Өтетін күні мен уақыты:</div>
         </div>
 
@@ -688,17 +693,17 @@
         </div>
 
         <!-- z:26  "Мекенжайы:" -->
-        <div class="c anim-slideL" style="left:50%;top:39.64%;z-index:26;width:396px;height:129px">
+        <div class="c-text anim-slideL" style="left:50%;top:39.64%;z-index:26;width:396px">
           <div class="text-content" style="font-size:40px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Мекенжайы:</div>
         </div>
 
         <!-- z:27  "Алматы қаласы" -->
-        <div class="c anim-slideL" style="left:50%;top:41.24%;z-index:27;width:377px;height:78px">
+        <div class="c-text anim-slideL" style="left:50%;top:41.24%;z-index:27;width:377px">
           <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;font-weight:bold;line-height:1.4">Алматы қаласы</div>
         </div>
 
         <!-- z:58  Address detail -->
-        <div class="c anim-fade" style="left:50%;top:42.80%;z-index:58;width:325px;height:78px">
+        <div class="c-text anim-fade" style="left:50%;top:42.80%;z-index:58;width:325px">
           <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Кыран көшесі, 9&#10;«Baq Sarai» мейрамханасы</div>
         </div>
 
@@ -708,12 +713,12 @@
         </div>
 
         <!-- z:61  "Қалай жетуге болады?" -->
-        <div class="c anim-slideR" style="left:50%;top:47.61%;z-index:61;width:396px;height:123px">
+        <div class="c-text anim-slideR" style="left:50%;top:47.61%;z-index:61;width:396px">
           <div class="text-content" style="font-size:34px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Қалай жетуге болады?</div>
         </div>
 
         <!-- z:63  Direction text -->
-        <div class="c anim-fade" style="left:50%;top:49.48%;z-index:63;width:316px;height:140px">
+        <div class="c-text anim-fade" style="left:50%;top:49.48%;z-index:63;width:316px">
           <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Ыңғайлы әрі оңай жету үшін, төмендегі сілтемені қолданыңыз.</div>
         </div>
 
@@ -777,12 +782,12 @@
         </div>
 
         <!-- z:29  "Той иелері:" -->
-        <div class="c anim-slideL" style="left:50%;top:61.31%;z-index:29;width:396px;height:151px">
+        <div class="c-text anim-slideL" style="left:50%;top:61.31%;z-index:29;width:396px">
           <div class="text-content" style="font-size:44px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Той иелері:</div>
         </div>
 
         <!-- z:30  "Жеңіс - Шұға" -->
-        <div class="c anim-slideR" style="left:50%;top:62.51%;z-index:30;width:320px;height:78px">
+        <div class="c-text anim-slideR" style="left:50%;top:62.51%;z-index:30;width:320px">
           <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Жеңіс - Шұға</div>
         </div>
 
@@ -792,12 +797,12 @@
         </div>
 
         <!-- z:37  "Сауалнама:" -->
-        <div class="c anim-slideL" style="left:50%;top:67.07%;z-index:37;width:346px;height:140px">
+        <div class="c-text anim-slideL" style="left:50%;top:67.07%;z-index:37;width:346px">
           <div class="text-content" style="font-size:40px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Сауалнама:</div>
         </div>
 
         <!-- z:76  "Тойға келуіңізді растауыңызды сұраймыз!" -->
-        <div class="c anim-slideR" style="left:50%;top:69.53%;z-index:76;width:296px;height:78px">
+        <div class="c-text anim-slideR" style="left:50%;top:69.53%;z-index:76;width:296px">
           <div class="text-content" style="font-size:18px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">Тойға келуіңізді &#10;растауыңызды сұраймыз!</div>
         </div>
 
@@ -835,7 +840,7 @@
         </div>
 
         <!-- z:91  "Тойға ізгі тілектер:" -->
-        <div class="c anim-slideL" style="left:50%;top:81.83%;z-index:91;width:346px;height:140px">
+        <div class="c-text anim-slideL" style="left:50%;top:81.83%;z-index:91;width:346px">
           <div class="text-content" style="font-size:40px;font-family:'_AsylbekM02Shelley','Great Vibes',cursive;color:#9c7e49;line-height:1.4">Тойға ізгі тілектер:</div>
         </div>
 
@@ -855,7 +860,7 @@
         </div>
 
         <!-- z:38  "ҚАДІРЛІ ҚОНАҒЫМЫЗ БОЛЫҢЫЗДАР!" -->
-        <div class="c anim-fade" style="left:50%;top:95.47%;z-index:38;width:396px;height:90px">
+        <div class="c-text anim-fade" style="left:50%;top:95.47%;z-index:38;width:396px">
           <div class="text-content" style="font-size:22px;font-family:'KZ_RomulC','Cormorant Garamond',serif;color:#9c7e49;line-height:1.4">ҚАДІРЛІ ҚОНАҒЫМЫЗ БОЛЫҢЫЗДАР!</div>
         </div>
 
@@ -949,7 +954,7 @@
   // CONFIG
   // ══════════════════════════════════════════
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzpQ_qPhIDpNBgcXpBAKeMYYJKTSBa9gynDlsQLwADs72ObLzVx9mLSREsyuO3L0mL7vg/exec';
-  const EVENT_NAME = 'Жеңіс-Шұға 60 мерейтой';
+  const EVENT_NAME = 'Веб-сайт шақыру';
   const EVENT_DATE = new Date('2026-05-08T17:00:00+06:00');
 
   // ══════════════════════════════════════════
@@ -959,6 +964,10 @@
     const card = document.getElementById('envelopeCard');
     const overlay = document.getElementById('envelopeOverlay');
     card.classList.add('opening');
+    // Start background music when envelope is opened
+    document.getElementById('bgAudio').play().catch(() => {});
+    audioPlaying = true;
+    document.getElementById('audioIcon').innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
     setTimeout(() => {
       overlay.classList.add('hidden');
       setTimeout(() => { overlay.style.display = 'none'; }, 500);
@@ -1053,11 +1062,11 @@
     document.getElementById('rsvpError').style.display = 'none';
     const spouseFields = document.getElementById('rsvpSpouseFields');
     const title = document.getElementById('rsvpModalTitle');
+    // Spouse name field not needed — we append "жұбайымен" automatically
+    spouseFields.style.display = 'none';
     if (selectedOption === 'spouse') {
-      spouseFields.style.display = 'block';
-      title.textContent = 'Есіміңіз бен жұбайыңыздың атын жазыңыз:';
+      title.textContent = 'Есіміңізді жазыңыз:';
     } else {
-      spouseFields.style.display = 'none';
       title.textContent = 'Есіміңізді жазыңыз:';
     }
     openModal('rsvpModal');
@@ -1069,29 +1078,27 @@
       showModalError('rsvpError', 'Есіміңізді енгізіңіз');
       return;
     }
+    // Build payload based on attendance option
+    let payload;
     if (selectedOption === 'spouse') {
-      const spouseVal = document.getElementById('rsvpSpouseName').value.trim();
-      if (!spouseVal) {
-        showModalError('rsvpError', 'Жұбайыңыздың атын енгізіңіз');
-        return;
-      }
+      // "With spouse" — send as single entry "Name жұбайымен", no separate guest row
+      payload = {
+        primary: { firstName: nameVal + ' жұбайымен', lastName: '' },
+        guests: [],
+        totalCount: 2,
+        event: EVENT_NAME
+      };
+    } else {
+      const parts = nameVal.split(' ');
+      const firstName = parts[0] || nameVal;
+      const lastName  = parts.slice(1).join(' ') || '';
+      payload = {
+        primary: { firstName, lastName },
+        guests: [],
+        totalCount: 1,
+        event: EVENT_NAME
+      };
     }
-
-    const parts = nameVal.split(' ');
-    const firstName = parts[0] || nameVal;
-    const lastName  = parts.slice(1).join(' ') || '';
-
-    const payload = {
-      primary: { firstName, lastName },
-      guests: [],
-      event: EVENT_NAME
-    };
-
-    if (selectedOption === 'spouse') {
-      const sp = document.getElementById('rsvpSpouseName').value.trim().split(' ');
-      payload.guests.push({ firstName: sp[0] || '', lastName: sp.slice(1).join(' ') || '' });
-    }
-    payload.totalCount = 1 + payload.guests.length;
 
     try {
       await fetch(APPS_SCRIPT_URL, {
@@ -1103,9 +1110,10 @@
     } catch(e) { console.error(e); }
 
     closeModal('rsvpModal');
+    const displayName = nameVal.split(' ')[0] || nameVal;
     document.getElementById('successText').textContent = selectedOption === 'spouse'
-      ? `${firstName} және жұбайыңыздың жауабы қабылданды. Мерейтойда кездескенше!`
-      : `${firstName}, жауабыңыз қабылданды. Мерейтойда кездескенше!`;
+      ? `${displayName} және жұбайыңыздың жауабы қабылданды. Мерейтойда кездескенше!`
+      : `${displayName}, жауабыңыз қабылданды. Мерейтойда кездескенше!`;
     openModal('successModal');
   }
 
